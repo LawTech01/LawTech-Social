@@ -1,5 +1,7 @@
 import './leftbar.css'
 import {RssFeed, Chat, VideoLibrary, Group, Bookmark, ContactSupport,Work, Event, School } from '@mui/icons-material'
+import {Users} from '../../dummyData'
+import CloseFriend from '../closeFriend/CloseFriend'
 
 export default function Leftbar() {
   return (
@@ -46,54 +48,7 @@ export default function Leftbar() {
            <button className='leftbarButton'>Show More</button>
            <hr className='leftbarHr'/>
            <ul className="leftbarfriendList">
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Raphael Tosin</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Ogun Tosin</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Ibrahim Salam</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Shodek Autos</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Lawal Abidex</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Sir Lharw</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Lambe SJ</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">My bABY</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Bolaji Carew</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Idris KJ</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Okaka Akoka</span>
-             </li>
-             <li className="leftbarFriend">
-               <img className='leftbarFriendImg' src='assets/person/2.jpeg' alt='' />
-               <span className="leftbarFriendName">Abiola Lawrence</span>
-             </li>
+              {Users.map((u) => (<CloseFriend key={u.id} user={u}/>))}
            </ul>
         </div>
 
